@@ -1,0 +1,154 @@
+.read-the-docs {
+  color: #888;
+}
+
+.slide {
+  animation: marquee 45s linear infinite;
+}
+
+.slides:hover .slide {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 1s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out;
+}
+
+/* SWIPER */
+
+.background-dgtaliza {
+  background-image: url("/src/app/assets/img/background-dgitaliza.png");
+  min-height: 660px;
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.swiper-button-prev {
+  background-image: url("/src/app/assets/img/arrow-right.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 60px;
+  height: 200px;
+  left: 40px;
+}
+
+.swiper-button-next {
+  background-image: url("/src/app/assets/img/arrow-left.png");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 60px;
+  height: 200px;
+  right: 40px;
+}
+
+@media (max-width: 1024px) {
+  .swiper-button-prev {
+    left: 35px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-button-next {
+    right: 30px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .swiper-button-prev {
+    left: 25px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-button-next {
+    right: 25px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 425px) {
+  .swiper-button-prev {
+    left: 0px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .swiper-button-next {
+    right: 0px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 375px) {
+  .swiper-button-prev {
+    left: 0px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .swiper-button-next {
+    right: 0px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.arrow {
+  position: absolute;
+  top: 45%;
+}
+
+/* Elimina el contenido predeterminado de las flechas */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none !important;
+}
+
+.swiper-button-disabled {
+  opacity: 0 !important;
+}
+

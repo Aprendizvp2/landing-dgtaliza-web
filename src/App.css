@@ -57,7 +57,6 @@ html {
 
 .background-dgtaliza {
   background-image: url("/src/app/assets/img/background-dgitaliza.png");
-  min-height: 660px;
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div id="home" className="min-h-screen flex flex-col justify-between">
       <div className="flex flex-col xl:flex-row justify-between md:text-center text-left items-center xl:items-start mx-8 xl:mx-40 pt-32 xl:pt-[200px]">
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-8" data-aos="fade-up">
           <h1 className="text-2xl xl:text-5xl text-white leading-relaxed text-center xl:text-left font-extrabold">
             TRANSFORMAMOS TUS IDEAS EN{" "}
             <span className="text-[#6588FF]">
@@ -20,7 +20,7 @@ export default function Home() {
             Conoce más
           </button>
         </div>
-        <div className="flex justify-center w-full">
+        <div className="flex justify-center w-full" data-aos="zoom-in">
           <img
             src={codingEditingInterface}
             alt="coding-editing-interface"

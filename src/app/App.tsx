@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import "react-alice-carousel/lib/alice-carousel.css";
 import "../App.css";
 import SmallHeader from "./components/smallheader/SmallHeader";
+import ScrollAnimation from "./components/scrollanimation/ScrollAnimation";
 
 function App() {
   return (
@@ -20,11 +21,13 @@ function App() {
       <Hidden mdUp>
         <SmallHeader />
       </Hidden>
-      <Home />
-      <Services />
-      <Clients />
-      <About />
-      <Footer />
+      <ScrollAnimation>
+        <Home />
+        <Services />
+        <Clients />
+        <About />
+        <Footer />
+      </ScrollAnimation>
     </div>
   );
 }

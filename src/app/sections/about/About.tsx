@@ -26,10 +26,14 @@ export default function About() {
         <h2 className="text-4xl xl:text-6xl w-full xl:w-[70%] text-white uppercase font-extrabold text-center leading-tight">
           ¡Quiero hacer realidad mi proyecto!
         </h2>
-        <button className="flex items-center gap-2 text-base text-white font-bold uppercase bg-[#719EFF] border border-[#719EFF] hover:border-white hover:bg-transparent px-8 py-4 mt-8 rounded-md transition">
+        <a
+          href="https://api.whatsapp.com/send?phone=573225331967"
+          target="_blank"
+          className="flex items-center gap-2 text-base text-white font-bold uppercase bg-[#719EFF] border border-[#719EFF] hover:border-white hover:bg-transparent px-8 py-4 mt-8 rounded-md transition"
+        >
           Contáctanos
           <img src={arrowButtonIcon} alt="Flecha" />
-        </button>
+        </a>
       </div>
     </div>
   );

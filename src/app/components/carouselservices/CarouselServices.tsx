@@ -1,8 +1,3 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import webDevelop from "../../assets/img/services/web-develop.jpg";
 import appDevelopment from "../../assets/img/services/app-development.jpg";
 import techmologiesForefront from "../../assets/img/services/technologies-at-the-forefront.jpg";
@@ -12,8 +7,11 @@ import customSoftwareDevelopment from "../../assets/img/services/custom-software
 import projectManagement from "../../assets/img/services/project-management.jpg";
 import performanceOptomization from "../../assets/img/services/performance-optimization.jpg";
 import maintenanceAndSupport from "../../assets/img/services/maintenance-and-support.jpg";
+import Slider, { Settings } from "react-slick";
+import ArrowServicesRight from "../arrowservicesright/ArrowServicesRight";
+import ArrowServicesLeft from "../arrowservicesleft/ArrowServicesLeft";
 
-const storiesData = [
+const services = [
   {
     id: 1,
     image: webDevelop,
@@ -70,115 +68,69 @@ const storiesData = [
   },
 ];
 
+const settings: Settings = {
+  infinite: true,
+  lazyLoad: "ondemand",
+  speed: 1000,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  centerMode: true,
+  centerPadding: "0px",
+  nextArrow: <ArrowServicesRight />,
+  prevArrow: <ArrowServicesLeft />,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+      },
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        initialSlide: 2,
+      },
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      },
+    },
+  ],
+};
+
 export default function CarouselServices() {
   return (
-    <Swiper
-      slidesPerView={3}
-      spaceBetween={10}
-      navigation
-      loop
-      draggable={false}
-      breakpoints={{
-        1024: {
-          slidesPerView: 3,
-        },
-        768: {
-          slidesPerView: 1,
-        },
-        640: {
-          slidesPerView: 1,
-        },
-        320: {
-          slidesPerView: 1,
-        },
-      }}
-      modules={[Pagination, Navigation, Autoplay]}
-      className="mySwiper"
-    >
-      <div>
-        {storiesData.map((item) => (
-          <SwiperSlide
-            key={item.id}
-            className="swiper-slide-two my-10 rounded-xl flex justify-center items-center flex-col gap-10 mt-20"
-            data-hash={`slide${item.id}`}
-          >
-            <div className="flex justify-center items-center px-60">
-              <div className="flex flex-col justify-center items-center h-full w-full">
-                <div className="relative w-[368px] h-[286px]">
-                  <img
-                    className="w-full h-full rounded-lg object-cover object-center brightness-75"
-                    src={item.image}
-                    alt="imagedestination"
-                  />
-                  <div className="overlay bg-gradient-to-t from-black rounded-lg" />
-                </div>
-                <div
-                  style={{
-                    bottom: -30,
-                    position: "absolute",
-                    width: "300px",
-                    height: "140px",
-                  }}
-                  className="p-2 rounded-xl flex flex-col items-center bg-white z-10 justify-center"
-                >
-                  <p className="text-[#0F1352] font-bold text-sm sm:text-xl md:text-xl text-center font-extrabold uppercase">
-                    {item.title}
-                  </p>
-                  <p className="text-[#717171] text-xs sm:text-sm text-center pt-2 font-sans">
-                    {item.description}
-                  </p>
-                </div>
+    <div className="mt-12">
+      <Slider {...settings} draggable={false} autoplay>
+        {services.map((item) => (
+          <div key={item.id} className="flex justify-center items-center">
+            <div className="flex flex-col justify-center items-center h-full w-full">
+              <div className="relative w-[356px] h-[286px]">
+                <img
+                  className="w-full h-full rounded-lg object-cover object-center brightness-75"
+                  src={item.image}
+                  alt="imagedestination"
+                />
+              </div>
+              <div className="p-2 rounded-xl flex flex-col items-center bg-white z-10 justify-center w-[320px] h-[140px] text-center -mt-20">
+                <p className="text-[#0F1352] font-bold text-sm sm:text-xl md:text-xl text-center font-extrabold uppercase">
+                  {item.title}
+                </p>
+                <p className="text-[#717171] text-xs sm:text-sm text-center pt-4 font-sans">
+                  {item.description}
+                </p>
               </div>
             </div>
-          </SwiperSlide>
+          </div>
         ))}
-      </div>
-    </Swiper>
+      </Slider>
+    </div>
   );
 }
-
-// import Slider from "react-slick";
-
-// export default function CarouselServices() {
-//   const settings = {
-//     dots: false,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 3,
-//     slidesToScroll: 3,
-// 	arrows: true,
-//   };
-//   return (
-//     <div className="slider-container">
-//       <Slider {...settings} autoplay>
-//         <div>
-//           <h3>1</h3>
-//         </div>
-//         <div>
-//           <h3>2</h3>
-//         </div>
-//         <div>
-//           <h3>3</h3>
-//         </div>
-//         <div>
-//           <h3>4</h3>
-//         </div>
-//         <div>
-//           <h3>5</h3>
-//         </div>
-//         <div>
-//           <h3>6</h3>
-//         </div>
-//         <div>
-//           <h3>7</h3>
-//         </div>
-//         <div>
-//           <h3>8</h3>
-//         </div>
-//         <div>
-//           <h3>9</h3>
-//         </div>
-//       </Slider>
-//     </div>
-//   );
-// }

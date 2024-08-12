@@ -7,7 +7,7 @@ import MenuDrawer from "../menuheader/MenuHeader";
 export default function SmallHeader() {
   const [openMenuDrawer, setOpenMenuDrawer] = useState(false);
 
-  const handleOpenMenuDrawer = (): void => {
+  const handleOpenMenuDrawer = () => {
     setOpenMenuDrawer(!openMenuDrawer);
   };
 

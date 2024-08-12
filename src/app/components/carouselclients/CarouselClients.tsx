@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Slider, { Settings } from "react-slick";
 import experiencie from "../../assets/img/about/experiencie.png";
 import inovation from "../../assets/img/about/inovation.png";
@@ -9,7 +9,7 @@ import ArrowLeft from "../arrowleft/ArrowLeft";
 
 const images = [experiencie, inovation, support, quality];
 
-const CarouselClients: React.FC = () => {
+export default function CarouselClients() {
   const [imageIndex, setImageIndex] = useState(0);
 
   const settings: Settings = {
@@ -64,6 +64,4 @@ const CarouselClients: React.FC = () => {
       </Slider>
     </div>
   );
-};
-
-export default CarouselClients;
+}

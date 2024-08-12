@@ -4,11 +4,9 @@ export default function Footer() {
   return (
     <div className="px-8 xl:px-40 py-20 flex flex-col xl:flex-row justify-between xl:items-start gap-10">
       <div className="flex flex-col items-start">
-        <img
-          src={logoWhite}
-          alt="logo-dgtaliza-white py-8"
-          className="w-40"
-        />
+        <a href="/">
+          <img src={logoWhite} alt="logo-dgtaliza-white" className="w-40" />
+        </a>
         <p className="text-white pt-8 font-sans">© 2024 Dgtaliza™.</p>
         <p className="text-white font-sans">Todos los derechos reservados</p>
       </div>

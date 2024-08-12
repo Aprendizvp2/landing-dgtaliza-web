@@ -9,22 +9,41 @@ function Header() {
       color="transparent"
       position="fixed"
     >
-      <img src={logoWhite} alt="logo-dgtaliza-white" className="w-40 pt-3" />
-      <a href="#home" className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase">
+      <a href="/">
+        <img src={logoWhite} alt="logo-dgtaliza-white" className="w-40 pt-3" />
+      </a>
+      <a
+        href="#home"
+        className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase"
+      >
         Inicio
       </a>
-      <a href="#services" className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase">
+      <a
+        href="#services"
+        className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase"
+      >
         Servicios
       </a>
-      <a href="#clients" className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase">
+      <a
+        href="#clients"
+        className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase"
+      >
         Clientes
       </a>
-      <a href="#about" className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase">
+      <a
+        href="#about"
+        className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase"
+      >
         Nosotros
       </a>
-      <button className="text-base text-white font-bold uppercase bg-[#719EFF] border border-[#719EFF] hover:border-white hover:bg-transparent px-8 py-4 rounded-md transition duration-300">
-        Contácto
-      </button>
+      <a
+        href="https://api.whatsapp.com/send?phone=573225331967"
+        target="_blank"
+      >
+        <p className="text-base text-white font-bold uppercase bg-[#719EFF] border border-[#719EFF] hover:border-white hover:bg-transparent px-8 py-4 rounded-md transition duration-300">
+          Contácto
+        </p>
+      </a>
     </AppBar>
   );
 }

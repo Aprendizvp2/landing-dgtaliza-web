@@ -58,7 +58,7 @@ export default function CarouselAbout() {
           slidesPerView: 1,
         },
         768: {
-          slidesPerView: 1,
+          slidesPerView: 2,
         },
         640: {
           slidesPerView: 1,

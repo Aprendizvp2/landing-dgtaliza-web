@@ -1,6 +1,18 @@
-.read-the-docs {
-  color: #888;
+/* Hide scroll bar */
+::-webkit-scrollbar {
+  display: none;
 }
+
+/* Background home */
+
+.background-dgtaliza {
+  background-image: url("/src/app/assets/img/background-dgitaliza.png");
+  position: relative;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Section separator */
 
 .slide {
   animation: marquee 45s linear infinite;
@@ -53,30 +65,19 @@ html {
   animation: fade-in-up 1s ease-out;
 }
 
-/* SWIPER */
-
-.background-dgtaliza {
-  background-image: url("/src/app/assets/img/background-dgitaliza.png");
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .swiper-button-prev {
-  background-image: url("/src/app/assets/img/arrow-right.png");
+  background-image: url("/src/app/assets/img/arrow-left.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  width: 60px;
-  height: 200px;
+  width: 56px;
+  height: 56px;
   left: 40px;
 }
 
 .swiper-button-next {
-  background-image: url("/src/app/assets/img/arrow-left.png");
+  background-image: url("/src/app/assets/img/arrow-right.png");
   background-repeat: no-repeat;
-  background-size: 100% auto;
-  width: 60px;
-  height: 200px;
+  width: 56px;
+  height: 56px;
   right: 40px;
 }
 
@@ -97,42 +98,42 @@ html {
 @media (max-width: 768px) {
   .swiper-button-prev {
     left: 25px;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
 
   .swiper-button-next {
     right: 25px;
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
   }
 }
 
 @media (max-width: 425px) {
   .swiper-button-prev {
     left: 0px;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
   }
 
   .swiper-button-next {
     right: 0px;
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
   }
 }
 
 @media (max-width: 375px) {
   .swiper-button-prev {
     left: 0px;
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
   }
 
   .swiper-button-next {
     right: 0px;
-    width: 20px;
-    height: 20px;
+    width: 28px;
+    height: 28px;
   }
 }
 
@@ -141,7 +142,6 @@ html {
   top: 45%;
 }
 
-/* Elimina el contenido predeterminado de las flechas */
 .swiper-button-next::after,
 .swiper-button-prev::after {
   display: none !important;
@@ -151,3 +151,40 @@ html {
   opacity: 0 !important;
 }
 
+/* Carousel clients */
+
+.slideOne img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.slideOne {
+  transform: scale(0.2);
+  transition: transform 300ms;
+  opacity: 0.5;
+}
+
+.activeSlide {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.arrow {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.next {
+  right: -5%;
+  top: 50%;
+  width: 56px;
+  height: 56px;
+}
+
+.prev {
+  left: -5%;
+  top: 50%;
+  width: 56px;
+  height: 56px;
+}

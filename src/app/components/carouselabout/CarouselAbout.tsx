@@ -48,6 +48,7 @@ export default function CarouselAbout() {
     <Swiper
       slidesPerView={3}
       spaceBetween={10}
+      speed={2000}
       navigation
       loop
       autoplay

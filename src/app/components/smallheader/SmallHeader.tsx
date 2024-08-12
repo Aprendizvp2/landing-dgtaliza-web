@@ -20,7 +20,7 @@ export default function SmallHeader() {
     >
       <div className="flex justify-between items-center">
         <a href="/">
-          <img src={logoWhite} className="pt-2" alt="icon" />
+          <img src={logoWhite} className="w-40 pt-2" alt="icon" />
         </a>
         <div>
           <MenuDrawer

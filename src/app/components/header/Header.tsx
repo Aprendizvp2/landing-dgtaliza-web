@@ -22,7 +22,7 @@ function Header() {
       <a href="#about" className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase">
         Nosotros
       </a>
-      <button className="text-base text-white font-bold uppercase bg-[#719EFF] border border-[#719EFF] hover:border-white hover:bg-transparent px-8 py-4 rounded-md transition">
+      <button className="text-base text-white font-bold uppercase bg-[#719EFF] border border-[#719EFF] hover:border-white hover:bg-transparent px-8 py-4 rounded-md transition duration-300">
         Contácto
       </button>
     </AppBar>

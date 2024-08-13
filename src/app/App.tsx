@@ -8,11 +8,11 @@ import About from "./sections/about/About";
 import Footer from "./components/footer/Footer";
 import SmallHeader from "./components/smallheader/SmallHeader";
 import ScrollAnimation from "./components/scrollanimation/ScrollAnimation";
+import Loading from "./components/loading/Loading";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "react-alice-carousel/lib/alice-carousel.css";
-import "../App.css";
-import Loading from "./components/loading/Loading";
+import "./App.css";
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);

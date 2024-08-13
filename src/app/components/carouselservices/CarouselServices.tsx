@@ -70,7 +70,6 @@ const services = [
 
 const settings: Settings = {
   infinite: true,
-  lazyLoad: "ondemand",
   speed: 1000,
   slidesToShow: 3,
   slidesToScroll: 3,
@@ -110,22 +109,53 @@ export default function CarouselServices() {
     <div className="mt-12">
       <Slider {...settings} draggable={false} autoplay>
         {services.map((item) => (
-          <div key={item.id} className="flex justify-center items-center">
-            <div className="flex flex-col justify-center items-center h-full w-full">
-              <div className="relative w-[356px] h-[286px]">
-                <img
-                  className="w-full h-full rounded-lg object-cover object-center brightness-75"
-                  src={item.image}
-                  alt="imagedestination"
-                />
-              </div>
-              <div className="p-2 rounded-xl flex flex-col items-center bg-white z-10 justify-center w-[320px] h-[140px] text-center -mt-20">
-                <p className="text-[#0F1352] font-bold text-sm sm:text-xl md:text-xl text-center font-extrabold uppercase">
-                  {item.title}
-                </p>
-                <p className="text-[#717171] text-xs sm:text-sm text-center pt-4 font-sans">
-                  {item.description}
-                </p>
+          <div
+            key={item.id}
+            className="container noselect flex justify-center items-center"
+          >
+            <div className="canvas">
+              <div className="tracker tr-1" />
+              <div className="tracker tr-2" />
+              <div className="tracker tr-3" />
+              <div className="tracker tr-4" />
+              <div className="tracker tr-5" />
+              <div className="tracker tr-6" />
+              <div className="tracker tr-7" />
+              <div className="tracker tr-8" />
+              <div className="tracker tr-9" />
+              <div className="tracker tr-10" />
+              <div className="tracker tr-11" />
+              <div className="tracker tr-12" />
+              <div className="tracker tr-13" />
+              <div className="tracker tr-14" />
+              <div className="tracker tr-15" />
+              <div className="tracker tr-16" />
+              <div className="tracker tr-17" />
+              <div className="tracker tr-18" />
+              <div className="tracker tr-19" />
+              <div className="tracker tr-20" />
+              <div className="tracker tr-21" />
+              <div className="tracker tr-22" />
+              <div className="tracker tr-23" />
+              <div className="tracker tr-24" />
+              <div className="tracker tr-25" />
+              <div id="card" className="flex flex-col items-center">
+                <div className="relative w-[356px] h-[286px]">
+                  <img
+                    className="w-full h-full rounded-lg object-cover object-center brightness-75"
+                    src={item.image}
+                    loading="lazy"
+                    alt="imagedestination"
+                  />
+                </div>
+                <div className="p-2 rounded-xl flex flex-col items-center bg-white z-10 justify-center w-[320px] h-[140px] text-center -mt-20">
+                  <p className="text-[#0F1352] font-bold text-sm sm:text-xl md:text-xl text-center font-extrabold uppercase">
+                    {item.title}
+                  </p>
+                  <p className="text-[#717171] text-xs sm:text-sm text-center pt-4 font-sans">
+                    {item.description}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

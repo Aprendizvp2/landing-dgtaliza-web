@@ -1,7 +1,7 @@
 export default function Loading() {
   return (
     <div className="loader-container">
-      <div className="container">
+      <div className="content">
         <div className="dot dot-1"></div>
         <div className="dot dot-2"></div>
         <div className="dot dot-3"></div>

@@ -58,7 +58,7 @@ export default function CarouselAbout() {
           slidesPerView: 1,
         },
         768: {
-          slidesPerView: 2,
+          slidesPerView: 1,
         },
         640: {
           slidesPerView: 1,
@@ -84,16 +84,16 @@ export default function CarouselAbout() {
                   style={{ backgroundColor: item.backgroundColorType }}
                 >
                   <img
-                    className="w-[150px] h-[150px] mb-10 rounded-t-lg object-cover object-center brightness-75"
+                    className="w-20 md:w-40 mb-10 rounded-t-lg object-cover object-center brightness-75"
                     src={item.image}
                     alt="image"
                   />
                 </div>
-                <div className="p-4 rounded-xl flex flex-col items-center bg-white z-10 justify-center w-full -mt-10 h-[100px] md:h-[200px]">
-                  <p className="text-[#0F1352] font-bold text-sm sm:text-xl md:text-xl text-center font-extrabold uppercase">
+                <div className="p-2 md:p-4 rounded-xl flex flex-col items-center bg-white z-10 justify-center w-full -mt-10 h-[140px] md:h-[200px]">
+                  <p className="text-[#0F1352] font-bold text-xs sm:text-xl md:text-xl text-center font-extrabold uppercase">
                     {item.title}
                   </p>
-                  <p className="text-[#717171] text-xs sm:text-lg text-center px-8 w-full w-4/5 pt-8 font-sans">
+                  <p className="text-[#717171] text-xs sm:text-lg text-center px-8 w-full md:w-4/5 pt-2 md:pt-8 font-sans">
                     {item.description}
                   </p>
                 </div>

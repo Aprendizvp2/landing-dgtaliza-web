@@ -1,13 +1,20 @@
 import { useState } from "react";
 import Slider, { Settings } from "react-slick";
-import experiencie from "../../assets/img/about/experiencie.png";
-import inovation from "../../assets/img/about/inovation.png";
-import support from "../../assets/img/about/support.png";
-import quality from "../../assets/img/about/quality.png";
+import devstiven from "../../assets/img/clients/devstiven.png";
+import codeleo from "../../assets/img/clients/codeleo.png";
+import porfolio from "../../assets/img/clients/portfolio.png";
 import ArrowRight from "../arrowright/ArrowRight";
 import ArrowLeft from "../arrowleft/ArrowLeft";
 
-const images = [experiencie, inovation, support, quality];
+// Define the images and their corresponding links
+const images = [
+  { img: devstiven, link: "https://devstiven.netlify.app/" },
+  { img: codeleo, link: "https://codeleo.vercel.app/" },
+  { img: porfolio, link: "https://example.com/porfolio" },
+  { img: devstiven, link: "https://devstiven.netlify.app/" },
+  { img: codeleo, link: "https://codeleo.vercel.app/" },
+  { img: porfolio, link: "https://example.com/porfolio" },
+];
 
 export default function CarouselClients() {
   const [imageIndex, setImageIndex] = useState(0);
@@ -15,7 +22,7 @@ export default function CarouselClients() {
   const settings: Settings = {
     infinite: true,
     lazyLoad: "ondemand",
-    speed: 300,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
     centerMode: true,
@@ -30,6 +37,7 @@ export default function CarouselClients() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
+          centerPadding: "0px",
         },
       },
       {
@@ -38,6 +46,8 @@ export default function CarouselClients() {
           slidesToShow: 2,
           slidesToScroll: 2,
           initialSlide: 2,
+          infinite: true,
+          centerPadding: "0px",
         },
       },
       {
@@ -45,20 +55,62 @@ export default function CarouselClients() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          infinite: true,
+          centerPadding: "0px",
         },
       },
     ],
   };
 
   return (
-    <div className="mx-8 xl:mx-40 mt-20">
-      <Slider {...settings} draggable={false}>
-        {images.map((img, idx) => (
+    <div className="mt-20 mx-8 lg:mx-40">
+      <Slider {...settings} draggable={false} autoplay>
+        {images.map((item, idx) => (
           <div
             key={idx}
             className={idx === imageIndex ? "slideOne activeSlide" : "slideOne"}
           >
-            <img src={img} alt={`Slide ${idx}`} />
+            <div className="relative w-full h-full overflow-hidden">
+              <a href={item.link} target="_blank" rel="noopener noreferrer">
+                <div className="container noselect">
+                  <div className="canvas">
+                    <div className="tracker tr-1"></div>
+                    <div className="tracker tr-2"></div>
+                    <div className="tracker tr-3"></div>
+                    <div className="tracker tr-4"></div>
+                    <div className="tracker tr-5"></div>
+                    <div className="tracker tr-6"></div>
+                    <div className="tracker tr-7"></div>
+                    <div className="tracker tr-8"></div>
+                    <div className="tracker tr-9"></div>
+                    <div className="tracker tr-10"></div>
+                    <div className="tracker tr-11"></div>
+                    <div className="tracker tr-12"></div>
+                    <div className="tracker tr-13"></div>
+                    <div className="tracker tr-14"></div>
+                    <div className="tracker tr-15"></div>
+                    <div className="tracker tr-16"></div>
+                    <div className="tracker tr-17"></div>
+                    <div className="tracker tr-18"></div>
+                    <div className="tracker tr-19"></div>
+                    <div className="tracker tr-20"></div>
+                    <div className="tracker tr-21"></div>
+                    <div className="tracker tr-22"></div>
+                    <div className="tracker tr-23"></div>
+                    <div className="tracker tr-24"></div>
+                    <div className="tracker tr-25"></div>
+                    <div id="card">
+                      <div className="w-[200px] sm:[200px] md:w-[300px] lg:w-[1000px] h-[160px] sm:h-[200px] md:h-[220px] lg:h-[100px]"></div>
+                      <img
+                        className="object-cover rounded-lg"
+                        src={item.img}
+                        alt={`Slide ${idx}`}
+                      />
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
           </div>
         ))}
       </Slider>

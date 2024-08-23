@@ -14,25 +14,25 @@ function Header() {
       </a>
       <a
         href="#home"
-        className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase"
+        className="text-base hover:text-[#719EFF] transition duration-300 text-white font-bold uppercase"
       >
         Inicio
       </a>
       <a
         href="#services"
-        className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase"
+        className="text-base hover:text-[#719EFF] transition duration-300 text-white font-bold uppercase"
       >
         Servicios
       </a>
       <a
         href="#clients"
-        className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase"
+        className="text-base hover:text-[#719EFF] transition duration-300 text-white font-bold uppercase"
       >
         Clientes
       </a>
       <a
         href="#about"
-        className="text-base hover:text-[#719EFF] transition text-white font-bold uppercase"
+        className="text-base hover:text-[#719EFF] transition duration-300 text-white font-bold uppercase"
       >
         Nosotros
       </a>

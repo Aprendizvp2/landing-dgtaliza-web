@@ -7,7 +7,7 @@ export default function Loading() {
         <div className="dot dot-3"></div>
         <img src="../../assets/svg/loading.svg" alt="" />
       </div>
-      <h2 className="text-white pt-80 text-6xl">Dgtaliza</h2>
+      <h2 className="text-white pt-80 text-4xl">Dgtaliza</h2>
     </div>
   );
 }

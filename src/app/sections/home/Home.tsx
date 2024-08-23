@@ -24,7 +24,7 @@ export default function Home() {
           <img
             src={codingEditingInterface}
             alt="coding-editing-interface"
-            className="w-[50%] xl:w-auto mt-10 xl:mt-0"
+            className="w-[60%] xl:w-auto mt-10 xl:mt-0"
           />
         </div>
       </div>

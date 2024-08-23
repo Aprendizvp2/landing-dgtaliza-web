@@ -6,7 +6,7 @@ type ArrowLeftProps = {
 
 export default function ArrowLeft({ onClick }: ArrowLeftProps) {
   return (
-    <div className="arrow prev" onClick={onClick}>
+    <div className="arrow arrow-clients-left" onClick={onClick}>
       <img src={arrowLeft} alt="arrow-left" />
     </div>
   );

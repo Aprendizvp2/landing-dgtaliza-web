@@ -1,6 +1,7 @@
 import { Button, Drawer, IconButton, Paper } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import logoWhite from "../../assets/img/logo-dgtaliza-white.png";
+import logoBlack from "../../assets/svg/dgtaliza-iso-black.svg";
 
 interface MenuDrawerProps {
   open: boolean;
@@ -18,22 +19,23 @@ export default function MenuDrawer({
           width: 320,
           height: "100%",
           borderRadius: 0,
+          padding: 2
         }}
-        className="flex flex-col justify-between"
       >
-        <div className="flex justify-between items-center p-10">
-         
+        <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 16 }}>
+          <div>
+            <img src={logoBlack} alt="logo" />
+          </div>
           <IconButton onClick={toggleMenuDrawer}>
             <CloseIcon sx={{ color: "black" }} fontSize="large" />
           </IconButton>
         </div>
-        <div className="flex flex-col items-start p-10">
+        <div className="flex flex-col items-start">
           <Button
             sx={{
               color: "black",
-              marginTop: 2,
-              marginBottom: 2,
-              fontSize: 20,
+          
+              fontSize: 16,
             }}
             href="#home"
           >
@@ -49,9 +51,8 @@ export default function MenuDrawer({
           <Button
             sx={{
               color: "black",
-              marginTop: 2,
-              marginBottom: 2,
-              fontSize: 20,
+          
+              fontSize: 16,
             }}
             href="#services"
           >
@@ -67,9 +68,8 @@ export default function MenuDrawer({
           <Button
             sx={{
               color: "black",
-              marginTop: 2,
-              marginBottom: 2,
-              fontSize: 20,
+          
+              fontSize: 16,
             }}
             href="#about"
           >
@@ -85,9 +85,8 @@ export default function MenuDrawer({
           <Button
             sx={{
               color: "black",
-              marginTop: 2,
-              marginBottom: 2,
-              fontSize: 20,
+          
+              fontSize: 16,
             }}
             href="#about"
           >
@@ -103,9 +102,8 @@ export default function MenuDrawer({
           <Button
             sx={{
               color: "black",
-              marginTop: 2,
-              marginBottom: 2,
-              fontSize: 20,
+          
+              fontSize: 16,
             }}
             href="#contact"
           >

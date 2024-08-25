@@ -122,14 +122,14 @@ export default function CarouselServices() {
         {services.map((item) => (
           <div key={item.id} className="flex justify-center items-center">
             <div className="flex flex-col justify-center items-center h-full w-full">
-              <div className="relative w-[200px] sm:[200px] md:w-[300px] lg:w-[356px] h-[160px] sm:h-[200px] md:h-[220px] lg:h-[284px]">
+              <div className="relative w-[200px] sm:[200px] md:w-[300px] lg:w-[316px] h-[160px] sm:h-[200px] md:h-[220px] lg:h-[244px]">
                 <img
                   className="w-full h-full rounded-lg object-cover object-center brightness-75"
                   src={item.image}
                   alt="imagedestination"
                 />
               </div>
-              <div className="p-2 rounded-xl flex flex-col items-center bg-white z-10 justify-center w-[160px] sm:w-[208px] md:w-[252px] lg:w-[320px] h-[100px] sm:h-[120px] md:h-[140px] text-center -mt-20">
+              <div className="p-2 rounded-xl flex flex-col items-center bg-white z-10 justify-center w-[160px] sm:w-[208px] md:w-[252px] lg:w-[280px] h-[100px] sm:h-[120px] md:h-[140px] text-center -mt-20">
                 <p className="text-[#0F1352] font-bold text-xs sm:text-base md:text-lg lg:text-2xl text-center font-extrabold uppercase">
                   {item.title}
                 </p>

@@ -63,54 +63,51 @@ export default function CarouselClients() {
   };
 
   return (
-    <div className="mt-20 mx-8 lg:mx-40">
-      <Slider {...settings} draggable={false} autoplay>
+    <div className="pt-20">
+      <Slider {...settings} draggable={false}>
         {images.map((item, idx) => (
           <div
             key={idx}
             className={idx === imageIndex ? "slideOne activeSlide" : "slideOne"}
           >
-            <div className="relative w-full h-full overflow-hidden">
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <div className="container noselect">
-                  <div className="canvas">
-                    <div className="tracker tr-1"></div>
-                    <div className="tracker tr-2"></div>
-                    <div className="tracker tr-3"></div>
-                    <div className="tracker tr-4"></div>
-                    <div className="tracker tr-5"></div>
-                    <div className="tracker tr-6"></div>
-                    <div className="tracker tr-7"></div>
-                    <div className="tracker tr-8"></div>
-                    <div className="tracker tr-9"></div>
-                    <div className="tracker tr-10"></div>
-                    <div className="tracker tr-11"></div>
-                    <div className="tracker tr-12"></div>
-                    <div className="tracker tr-13"></div>
-                    <div className="tracker tr-14"></div>
-                    <div className="tracker tr-15"></div>
-                    <div className="tracker tr-16"></div>
-                    <div className="tracker tr-17"></div>
-                    <div className="tracker tr-18"></div>
-                    <div className="tracker tr-19"></div>
-                    <div className="tracker tr-20"></div>
-                    <div className="tracker tr-21"></div>
-                    <div className="tracker tr-22"></div>
-                    <div className="tracker tr-23"></div>
-                    <div className="tracker tr-24"></div>
-                    <div className="tracker tr-25"></div>
-                    <div id="card">
-                      <div className="w-[200px] sm:[200px] md:w-[300px] lg:w-[1000px] h-[160px] sm:h-[200px] md:h-[220px] lg:h-[100px]"></div>
-                      <img
-                        className="object-cover rounded-lg"
-                        src={item.img}
-                        alt={`Slide ${idx}`}
-                      />
-                    </div>
+            <a href={item.link} target="_blank" rel="noopener noreferrer">
+              <div className="container noselect my-20">
+                <div className="canvas">
+                  <div className="tracker tr-1"></div>
+                  <div className="tracker tr-2"></div>
+                  <div className="tracker tr-3"></div>
+                  <div className="tracker tr-4"></div>
+                  <div className="tracker tr-5"></div>
+                  <div className="tracker tr-6"></div>
+                  <div className="tracker tr-7"></div>
+                  <div className="tracker tr-8"></div>
+                  <div className="tracker tr-9"></div>
+                  <div className="tracker tr-10"></div>
+                  <div className="tracker tr-11"></div>
+                  <div className="tracker tr-12"></div>
+                  <div className="tracker tr-13"></div>
+                  <div className="tracker tr-14"></div>
+                  <div className="tracker tr-15"></div>
+                  <div className="tracker tr-16"></div>
+                  <div className="tracker tr-17"></div>
+                  <div className="tracker tr-18"></div>
+                  <div className="tracker tr-19"></div>
+                  <div className="tracker tr-20"></div>
+                  <div className="tracker tr-21"></div>
+                  <div className="tracker tr-22"></div>
+                  <div className="tracker tr-23"></div>
+                  <div className="tracker tr-24"></div>
+                  <div className="tracker tr-25"></div>
+                  <div id="card">
+                    <img
+                      className="rounded-3xl"
+                      src={item.img}
+                      alt={`Slide ${idx}`}
+                    />
                   </div>
                 </div>
-              </a>
-            </div>
+              </div>
+            </a>
           </div>
         ))}
       </Slider>
